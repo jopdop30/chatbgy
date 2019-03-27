@@ -35,11 +35,7 @@
       $(function () {
         var socket = io();
         $('form').submit(function(){
-          if (localStorage.pk != null) {
           socket.emit('chat message', localStorage.pk + ": " + $('#m').val());
-          } else{
-               window.location = 'https://chat2.retief.club/login'};
-        }
           $('#m').val('');
           return false;
         });
