@@ -5,7 +5,10 @@ var port = process.env.PORT || 3000;
 
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
-  res.sendFile(test + '/test.txt');
+});
+
+app.get('/login', function(req, res) {
+    res.sendfile(html_dir + 'login.html');
 });
 
 io.on('connection', function(socket){
