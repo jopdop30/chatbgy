@@ -35,7 +35,7 @@
       $(function () {
         var socket = io();
         $('form').submit(function(){
-          socket.emit('chat message', $('#m').val()+localStorage.pk);
+          socket.emit('chat message', localStorage.pk + ": " + $('#m').val());
           $('#m').val('');
           return false;
         });
