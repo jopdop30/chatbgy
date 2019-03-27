@@ -40,8 +40,12 @@
           return false;
         });
         socket.on('chat message', function(msg){
+          if (msg == "admin: reload") {
+           document.location.reload(true); 
+          } else {
           $('#messages').append($('<li>').text(msg));
           window.scrollTo(0, document.body.scrollHeight);
+          }
         });
         socket.on('command', function(cmd){
    
