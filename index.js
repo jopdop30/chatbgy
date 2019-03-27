@@ -20,6 +20,9 @@ io.on('connection', function(socket){
   socket.on('chat message', function(msg){
     io.emit('chat message', msg);
   });
+  socket.on('command', function(cmd){
+    io.emit('command', cmd);
+  });
 });
 
 http.listen(port, function(){
