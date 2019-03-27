@@ -13,7 +13,7 @@ app.get('/login', function(req, res) {
 });
 
 app.get('/cmd', function(req, res) {
-    res.sendfile(__direname + '/cmd.html');
+    res.sendfile(__dirname + '/cmd.html');
 });
 
 io.on('connection', function(socket){
