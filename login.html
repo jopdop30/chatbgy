@@ -11,7 +11,7 @@
 <script>
 function myFunction() {
  ham = prompt("Please enter your passkey below")
-  if (ham != null) {
+  if (ham != "") {
 localStorage.setItem("pk", ham);
 window.location = 'https://chat2.retief.club'};
 }
