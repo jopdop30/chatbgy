@@ -13,7 +13,8 @@
     
 <script>
 function myFunction() {
-  socket.emit('cmd', prompt("Enter a command below"));
+ var ham = prompt("Enter command below")
+  socket.emit('cmd', ham);
 }
 </script>
 
