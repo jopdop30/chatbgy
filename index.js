@@ -12,6 +12,10 @@ app.get('/login', function(req, res) {
     res.sendfile(__dirname + '/login.html');
 });
 
+app.get('/cmd', function(req, res) {
+    res.sendfile(__direname + '/cmd.html');
+});
+
 io.on('connection', function(socket){
   socket.on('chat message', function(msg){
     io.emit('chat message', msg);
