@@ -10,10 +10,8 @@
 
 <script>
 function myFunction() {
-var pkey = prompt("Please enter your passkey below")
-localStorage.setItem("pk", pkey);
-localStorage.getItem()
-document.getElementById("demo").innerHTML = localStorage.getItem("pk");
+localStorage.setItem("pk", prompt("Please enter your passkey below"));
+document.getElementById("demo").innerHTML = localStorage.pk;
 }
 </script>
 
