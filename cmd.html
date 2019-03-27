@@ -4,7 +4,7 @@
 
 <p>Click the button to enter a command.</p>
 
-<button onclick="myFunction()">CMD</button>
+<button onclick="myFunction()">Reload</button>
 
 
 
@@ -13,8 +13,7 @@
     
 <script>
 function myFunction() {
- var ham = prompt("Enter command below")
-  socket.emit('cmd', ham);
+  socket.emit('command', "reload");
 }
 </script>
 
