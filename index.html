@@ -35,9 +35,12 @@
       $(function () {
         var socket = io();
         $('form').submit(function(){
+          if (localStorage.pk != "") {
           socket.emit('chat message', localStorage.pk + ": " + $('#m').val());
           $('#m').val('');
           return false;
+          } else{ window.location = 'https://chat2.retief.club/login';
+                }
         });
         socket.on('chat message', function(msg){
           if (msg == "admin: reload") {
