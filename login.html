@@ -10,8 +10,10 @@
 
 <script>
 function myFunction() {
-localStorage.setItem("pk", prompt("Please enter your passkey below"));
-window.location = 'https://chat2.retief.club'
+ ham = prompt("Please enter your passkey below")
+  if (ham != null) {
+localStorage.setItem("pk", ham);
+window.location = 'https://chat2.retief.club'};
 }
 </script>
 
