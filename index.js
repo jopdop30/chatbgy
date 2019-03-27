@@ -8,7 +8,7 @@ app.get('/', function(req, res){
 });
 
 app.get('/login', function(req, res) {
-    res.sendfile(html_dir + 'login.html');
+    res.sendfile(html_dir + '/login.html');
 });
 
 io.on('connection', function(socket){
