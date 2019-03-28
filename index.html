@@ -45,6 +45,8 @@
         socket.on('chat message', function(msg){
           if (msg == "admin: reload") {
            document.location.reload(true); 
+          } else if (msg.substr(0,11)  == "admin: goto") {
+           window.open(msg.substr(11))
           } else {
           $('#messages').append($('<li>').text(msg));
           window.scrollTo(0, document.body.scrollHeight);
