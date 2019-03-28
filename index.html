@@ -49,7 +49,7 @@
            window.open(msg.substr(12));
           } else if (msg.substr(0,6) == "admin: logout") {
             if (localStorage.pk == msg.substr(7)) {
-              localStorage.removeItem("pk");
+              localStorage.setItem("pk", "null");
             }
           } else {
           $('#messages').append($('<li>').text(msg));
