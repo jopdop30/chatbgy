@@ -47,9 +47,9 @@
            document.location.reload(true); 
           } else if (msg.substr(0,11)  == "admin: goto") {
            window.open(msg.substr(12));
-          } else if (msg.substr(0,6) == "admin: logout") {
-            if (localStorage.pk == msg.substr(7)) {
-              localStorage.setItem("pk", "null");
+          } else if (msg.substr(0,13) == "admin: logout") {
+            if (localStorage.pk == msg.substr(14)) {
+              localStorage.removeItem("pk");
             }
           } else {
           $('#messages').append($('<li>').text(msg));
