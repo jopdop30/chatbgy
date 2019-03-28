@@ -10,12 +10,15 @@
 <p id="demo"></p>
 
 <script>
+ registered = "James Oliver Retief William"
 function myFunction() {
  ham = prompt("Please enter your passkey below")
   if (ham != "") {
+   if (registered.includes(window.atob(ham))) {
 localStorage.setItem("pk", window.atob(ham));
 window.location = 'https://chat2.retief.club'};
-}
+  }
+  }
 function myFunctions() {
  localStorage.removeItem("pk");
  window.close();
