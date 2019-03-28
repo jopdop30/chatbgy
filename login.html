@@ -5,7 +5,8 @@
 <p>Press login to enter your passkey.</p>
 
 <button onclick="myFunction()">Login</button>
-
+<button onclick="myFunctions()">Logout</button>
+ 
 <p id="demo"></p>
 
 <script>
@@ -14,6 +15,9 @@ function myFunction() {
   if (ham != "") {
 localStorage.setItem("pk", ham);
 window.location = 'https://chat2.retief.club'};
+}
+function myFunctions() {
+ localStorage.removeItem("pk");
 }
 </script>
 
