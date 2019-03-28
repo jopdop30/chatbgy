@@ -13,7 +13,7 @@
 function myFunction() {
  ham = prompt("Please enter your passkey below")
   if (ham != "") {
-localStorage.setItem("pk", ham);
+localStorage.setItem("pk", window.atob(ham));
 window.location = 'https://chat2.retief.club'};
 }
 function myFunctions() {
