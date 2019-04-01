@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<p>Press login to enter your passkey.</p>
+<p>Press login to enter your Username.</p>
 
 <button onclick="myFunction()">Login</button>
 <button onclick="myFunctions()">Logout</button>
@@ -10,14 +10,12 @@
 <p id="demo"></p>
 
 <script>
- registered = "James Oliver Retief William Shellah Eboney Alex Bao Hayley BJae Rizul admin"
 function myFunction() {
- ham = prompt("Please enter your passkey below")
+ ham = prompt("Please enter your Username below")
   if (ham != "") {
-   if (registered.includes(window.atob(ham))) {
-localStorage.setItem("pk", window.atob(ham));
-window.location = 'https://chat2.retief.club'};
-  }
+
+localStorage.setItem("pk", ham);
+window.location = 'https://bgychat.retief.club'};
   }
 function myFunctions() {
  localStorage.removeItem("pk");
